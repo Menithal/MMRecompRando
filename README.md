@@ -17,8 +17,8 @@
     - [Zelda64Recompiled-AppImage-X64.zip](https://nightly.link/Zelda64Recomp/Zelda64Recomp/actions/artifacts/2076240939.zip)
     - [Zelda64Recompiled-AppImage-ARM64.zip](https://nightly.link/Zelda64Recomp/Zelda64Recomp/actions/artifacts/2076234973.zip)
 3. Download the [mods](https://github.com/LittlestCube/MMRecompRando/releases/latest), as well as `apconnect.txt`.
-4. Place the mods within the zip into the Zelda64Recomp mods folder.
-    1. If on Windows, this is located at `%LOCALAPPDATA%\Zelda64Recompiled\mods`.
+4. Place the mods folder **WITHIN** the zip into the Zelda64Recomp folder. The mod dlls should be within the mods folder.
+    1. If on Windows, this is located at `%LOCALAPPDATA%\Zelda64Recompiled\mods`. 
     2. If on Linux, this is located at `~/.config/Zelda64Recompiled/mods`.
 5. If you like, you can add a [texture pack](https://github.com/Zelda64Recomp/Zelda64Recomp/pull/447#issue-2433547959).
     1. Download both `.7z` files from one of the `.rtz` links in Darío's PR.
@@ -33,7 +33,16 @@
 
 ### When I press "Start Game" the whole thing crashes! What gives?
 
-Make sure you have a file named "apconnect.txt" (without the quotes) in the same folder as the exe, and that it contains the correct connection information for your Archipelago server slot.
+Make sure you have a file named `apconnect.txt` (without the quotes) in the same folder as the exe, and that it contains the correct connection information for your Archipelago server slot.
+
+### The game started but is not connecting to Archipelago?
+
+Double check that your `apconnect.txt` file is in the following format and update the server address to match.
+```
+true
+<server address>:<port>
+<UserName
+```
 
 ### I got Letter to Kafei and now I can't use the Pendant of Memories! Is it just gone?
 
